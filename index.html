@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Broken Script archive</title>
+<style>
+  body {
+    background-color: #1b1b1b;
+    color: #d4d4d4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+  }
+
+  .version {
+    max-width: 600px;
+    margin: 16px auto;
+    background-color: #2c2c2c;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #28a745;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease;
+  }
+
+  .version:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #218838;
+  }
+
+  .version > div {
+    flex: 1 1 auto;
+    color: #fff;
+    word-wrap: break-word;
+    font-size: 1rem;
+    margin-right: 10px;
+    min-width: 200px;
+  }
+
+  .version > div:first-child {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    flex-basis: 100%;
+    color: #28a745;
+  }
+
+  .version button {
+    background-color: #28a745;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0 0 8px #28a745;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  .version button:hover {
+    background-color: #218838;
+    box-shadow: 0 0 15px #218838;
+  }
+
+  .version button:disabled {
+    background-color: #d9534f;
+    box-shadow: 0 0 8px #d9534f;
+    cursor: not-allowed;
+  }
+</style>
+<script>
+  function downloadFile(button) {
+    const parent = button.closest('.version');
+    const fileName = parent.querySelector('div:first-child').textContent.trim();
+    const url = `/Archivos/jars/${encodeURIComponent(fileName)}.jar`;
+
+    button.disabled = true;
+    button.textContent = 'Wait';
+    button.style.backgroundColor = '#d9534f'; // rojo
+    button.style.boxShadow = '0 0 8px #d9534f';
+
+    // Crear un enlace invisible para descargar sin cambiar de página
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName + '.jar';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+</script>
+</head>
+<body>
+
+<h1>Version History</h1>
+
+<div class="version">
+  <div>thebrokenscript-1.9.3-forge-1.20.1</div>
+  <div>Size: 86.1MB</div>
+  <div>Changes: New events
+New anomaly
+New structure
+bugfix</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>-UNSAFE- The Not-so Broken Script -TBS 1.9.1 COMMUNITY PATCH-</div>
+  <div>Size: 85.9MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>-SAFE- The Not-so Broken Script -TBS 1.9.1 COMMUNITY PATCH-</div>
+  <div>Size: 85.9MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.9-forge-1.20.1_even_safer</div>
+  <div>Size: 86MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.9-forge-1.20.1_safe</div>
+  <div>Size: 86MB</div>
+  <div>Changes: hi</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.9-forge-1.20.1</div>
+  <div>Size: 86MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.7.3-forge-1.20.1</div>
+  <div>Size: 41MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.7.2-forge-1.20.1</div>
+  <div>Size: 40.9MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.7.1-forge-1.20.1</div>
+  <div>Size: 41MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.7-forge-1.20.1</div>
+  <div>Size: 41MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.6.2-forge-1.20.1</div>
+  <div>Size: 39.7MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.6-forge-1.20.1</div>
+  <div>Size: 39.7MB</div>
+  <div>Changes: placeholder
+place
+holder
+'
+'
+test
+[+] something
+[−] something</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.4-forge-1.20.1</div>
+  <div>Size: 38.5MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.3.5-forge-1.20.1</div>
+  <div>Size: 34.8MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.3-forge-1.20.1</div>
+  <div>Size: 31.5MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.2-1.20.1-Missing</div>
+  <div>Size: 28.8MB-31.5MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)"disabled>Download</button>
+</div>
+
+<div class="version">
+  <div>thebrokenscript-1.1-[fixed]-1.20.1</div>
+  <div>Size: 28.8MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>The_broken_script_v1.0(fix)</div>
+  <div>Size: 26.6MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>The broken script 0.9</div>
+  <div>Size: 24.8MB</div>
+  <div>Changes: placeholder</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>TheBrokenScript0.8forge1.20.1</div>
+  <div>Size: 24.6MB</div>
+  <div>Changes: release</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+<div class="version">
+  <div>The Br0k3n Script v0.71</div>
+  <div>Size: 12.5MB</div>
+  <div>Changes: beta test</div>
+  <div>Plataform: Forge</div>
+  <button onclick="downloadFile(this)">Download</button>
+</div>
+
+</body>
+</html>

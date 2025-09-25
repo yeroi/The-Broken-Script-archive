@@ -1,0 +1,260 @@
+
+.custom-link {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.custom-link:hover {
+  color: darkblue;
+}
+
+.version {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.version > div {
+  flex-grow: 1;
+}
+
+.download {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.toggle-btn {
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+/* Colores base */
+:root {
+    --color-fondo: #121212;
+    --color-container: #1e1e1e;
+    --color-header: #111;
+    --color-texto: #fff;
+    --color-secundario: #28a745; /* Verde principal */
+    --color-secundario-hover: #218838; /* Verde oscuro hover */
+    --color-alerta: #d9534f; /* Rojo para alertas o botones deshabilitados */
+    --color-alerta-hover: #c9302c;
+    --color-enlace: #feaa00; /* Amarillo-naranja para links */
+    --color-enlace-hover: #00FF00; /* Verde vivo hover en links */
+    --color-sombra: rgba(40, 167, 69, 0.5);
+    --color-sombra-fuerte: rgba(40, 167, 69, 1);
+}
+
+/* Body y contenedores */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-repeat: repeat;
+    background-size: 34px 32px;
+    margin-bottom: 60px;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--color-container);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+/* Header */
+header {
+    background: var(--color-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 64px;
+    height: auto;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: auto;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-enlace);
+}
+
+/* Títulos */
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--color-texto);
+}
+
+/* Versiones */
+.version {
+    background-color: #2c2c2c;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.version:hover {
+    transform: scale(1.05);
+}
+
+.version div {
+    flex: 1;
+    text-align: left;
+    word-wrap: break-word;
+    color: var(--color-texto);
+}
+
+/* Botones */
+.version button {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--color-sombra);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 15px;
+}
+
+.version button:hover {
+    background-color: var(--color-secundario-hover);
+    box-shadow: 0 0 20px var(--color-sombra-fuerte);
+}
+
+.version button:disabled {
+    background-color: var(--color-alerta);
+    box-shadow: 0 0 10px rgba(217, 83, 79, 0.5);
+    cursor: not-allowed;
+}
+
+/* Cambios desplegables */
+.changes {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Botón toggle */
+.toggle-btn {
+    background-color: var(--color-secundario);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: var(--color-secundario-hover);
+}
+
+/* Links personalizados */
+a.custom-link {
+    color: var(--color-enlace);
+    text-decoration: none;
+}
+
+a.custom-link:hover {
+    color: var(--color-enlace-hover);
+}
+
+/* Footer */
+.footer {
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: var(--color-enlace);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Spinner */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--color-enlace);
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .version {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .version button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
